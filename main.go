@@ -14,7 +14,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 // Define a function to display a specific snippet
 func snipperView(w http.ResponseWriter, r *http.Request) {
 	// Write the response back to the client (Display a speific snippet...)
-	w.Write([]byte("Display a speific snippet..."))
+	w.Write([]byte("Display a specific snippet..."))
 }
 
 // Define a function for creating a new snippet
@@ -33,7 +33,7 @@ func main() {
 	mux.HandleFunc("/snippet/create", snippetCreate)
 
 	// Print the available routes
-	log.Print("Started: ", mux)
+	log.Print("Starting server on port 4000...")
 
 	// Start listening for incoming requests
 	err := http.ListenAndServe(":4000", mux) // Listen on port 4000
